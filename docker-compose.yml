@@ -34,3 +34,6 @@ services:
 networks:
   monitoring-net:
     external: true
+
+
+#feito por Rinard Morais - Analista DevOps
