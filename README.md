@@ -61,32 +61,46 @@ cd monitoring-unimed-natal-ext
 Você pode criar um `docker-compose.yml` como este (opcional):
 
 ```yaml
-version: '3'
 
 services:
-  prometheus:
-    image: prom/prometheus
-    volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml
-      - ./blackbox.yml:/etc/prometheus/blackbox.yml
-    command:
-      - '--config.file=/etc/prometheus/prometheus.yml'
-    ports:
-      - 9090:9090
-
-  blackbox:
-    image: prom/blackbox-exporter
-    volumes:
-      - ./blackbox.yml:/etc/blackbox_exporter/config.yml
-    command:
-      - '--config.file=/etc/blackbox_exporter/config.yml'
-    ports:
-      - 9115:9115
-
   grafana:
     image: grafana/grafana
+    container_name: grafana
     ports:
-      - 3000:3000
+      - "3000:3000"
+    volumes:
+      - /home/lab/grafana-storage:/var/lib/grafana
+    networks:
+      - monitoring-net
+    restart: unless-stopped
+
+  prometheus:
+    image: prom/prometheus:v2.52.0
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./prometheus-data:/prometheus
+    networks:
+      - monitoring-net
+    restart: unless-stopped
+
+  blackbox_exporter:
+    image: prom/blackbox-exporter:latest
+    container_name: blackbox_exporter
+    ports:
+      - "9115:9115"
+    networks:
+      - monitoring-net
+    restart: unless-stopped
+
+networks:
+  monitoring-net:
+    external: true
+
+
+#feito por Rinard Morais - Analista DevOps
 ```
 
 ### 3. Importar o Dashboard no Grafana
