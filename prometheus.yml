@@ -13,6 +13,8 @@ scrape_configs:
       module: [http_2xx]
     static_configs:
       - targets:
+          - https://api-consolemed.unimednatal.com.br/
+          - https://api-benef.unimednatal.com.br/
           - https://portaldocooperado.unimednatal.com.br/
           - https://guiamedico.unimednatal.com.br/
           - https://cultural.unimednatal.com.br/
