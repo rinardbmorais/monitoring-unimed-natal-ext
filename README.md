@@ -38,11 +38,35 @@ O dashboard exibe:
 ## 🧩 Estrutura do Projeto
 
 ```bash
-.
-├── grafana-dashboard.json       # JSON com o painel do Grafana
-├── blackbox.yml                 # Configuração do Blackbox Exporter
-├── prometheus.yml               # Configuração do Prometheus
-└── README.md
+.monitoring-unimed-ext/
+├── docker-compose.yml
+├── prometheus.yml        # Configuração principal do Prometheus
+├── blackbox.yml          # Configuração do Blackbox Exporter
+├── grafana/              # Pasta reservada (possivelmente para configs do Grafana)
+├── prometheus/           # Pasta reservada (scripts ou arquivos auxiliares para Prometheus)
+├── prometheus-data/      # Volume persistente de dados do Prometheus (bind: ./prometheus-data)
+│   └── (dados de métricas, TSDB do Prometheus)
+├── scripts/              # Scripts auxiliares
+├── backups/              # Diretório para possíveis backups
+└── README.md             # Documentação do projeto
+
+Contêineres (Docker Compose):
+└── Rede: monitoring-net (externa)
+    ├── grafana
+    │   ├── Imagem: grafana/grafana
+    │   ├── Porta: 3000:3000
+    │   └── Volume: /home/lab/grafana-storage:/var/lib/grafana
+    │
+    ├── prometheus
+    │   ├── Imagem: prom/prometheus:v2.52.0
+    │   ├── Porta: 9090:9090
+    │   ├── Volume: ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    │   └── Volume: ./prometheus-data:/prometheus
+    │
+    └── blackbox_exporter
+        ├── Imagem: prom/blackbox-exporter:latest
+        └── Porta: 9115:9115
+
 ```
 
 ---
