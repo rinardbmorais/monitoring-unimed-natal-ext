@@ -12,6 +12,8 @@ Este projeto apresenta um painel de observabilidade utilizando **Blackbox Export
 - **Kubernetes** ou ambiente local com Docker
 - **JSON de Dashboard customizado**
 
+![image](https://github.com/user-attachments/assets/dbd8af63-6c79-49d2-801d-9f7cb48bef19)
+
 ---
 
 ## 🎯 Objetivo
