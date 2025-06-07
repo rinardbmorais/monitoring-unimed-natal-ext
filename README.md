@@ -53,7 +53,7 @@ O dashboard exibe:
 
 ```bash
 git clone https://github.com/rinardbmorais/monitoring-unimed-natal-ext.git
-cd blackbox-monitoring-dashboard
+cd monitoring-unimed-natal-ext
 ```
 
 ### 2. Subir Prometheus + Blackbox + Grafana com Docker Compose
