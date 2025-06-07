@@ -1,0 +1,17 @@
+{
+	"ulid": "01JX50RDBFSRE2F03NZECTVMMW",
+	"minTime": 1749283200925,
+	"maxTime": 1749290400000,
+	"stats": {
+		"numSamples": 429405,
+		"numSeries": 915,
+		"numChunks": 3763
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01JX50RDBFSRE2F03NZECTVMMW"
+		]
+	},
+	"version": 1
+}
