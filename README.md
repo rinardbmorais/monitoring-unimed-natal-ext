@@ -52,8 +52,8 @@ O dashboard exibe:
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/seuusuario/blackbox-monitoring-dashboard.git
-cd blackbox-monitoring-dashboard
+git clone https://github.com/rinardbmorais/monitoring-unimed-natal-ext.git
+cd monitoring-unimed-natal-ext
 ```
 
 ### 2. Subir Prometheus + Blackbox + Grafana com Docker Compose
@@ -117,7 +117,7 @@ services:
 
 ## 📣 Contato
 
-Feito com 💚 por [Seu Nome](https://www.linkedin.com/in/rinard-morais)
+Feito por [Rinard Morais](https://www.linkedin.com/in/rinard-morais)
 
 ---
 
