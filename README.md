@@ -117,7 +117,7 @@ services:
 
 ## 📣 Contato
 
-Feito com 💚 por [Seu Nome](https://www.linkedin.com/in/rinard-morais)
+Feito por [Rinard Morais](https://www.linkedin.com/in/rinard-morais)
 
 ---
 
