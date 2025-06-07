@@ -29,7 +29,7 @@ O dashboard exibe:
 
 ## 📸 Prévia do Dashboard
 
-> *(Insira uma imagem aqui: `screenshot.png` ou um link do Grafana com o painel visível)*
+> ![image](https://github.com/user-attachments/assets/c04dedc6-0b7d-4791-8a43-c0d80eaa657d)
 
 ---
 
@@ -115,7 +115,7 @@ services:
 
 ## 📣 Contato
 
-Feito com 💚 por [Seu Nome](https://www.linkedin.com/in/seunome)
+Feito com 💚 por [Seu Nome](https://www.linkedin.com/in/rinard-morais)
 
 ---
 
