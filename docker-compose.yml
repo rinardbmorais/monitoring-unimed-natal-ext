@@ -27,6 +27,10 @@ services:
     container_name: blackbox_exporter
     ports:
       - "9115:9115"
+    volumes:
+      - ./blackbox.yml:/etc/blackbox_exporter/blackbox.yml:ro
+    command:
+      - "--config.file=/etc/blackbox_exporter/blackbox.yml"
     networks:
       - monitoring-net
     restart: unless-stopped
@@ -34,6 +38,3 @@ services:
 networks:
   monitoring-net:
     external: true
-
-
-#feito por Rinard Morais - Analista DevOps

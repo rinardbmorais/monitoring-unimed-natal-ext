@@ -1,0 +1,17 @@
+{
+	"ulid": "01JX8RPG45PTX6S8ATFV25HXGX",
+	"minTime": 1749408969009,
+	"maxTime": 1749412800000,
+	"stats": {
+		"numSamples": 205556,
+		"numSeries": 1182,
+		"numChunks": 2306
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01JX8RPG45PTX6S8ATFV25HXGX"
+		]
+	},
+	"version": 1
+}
