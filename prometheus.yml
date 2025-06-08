@@ -1,35 +1,39 @@
 global:
-  scrape_interval: 15s
-  evaluation_interval: 15s
+  scrape_interval: 15s  # Coleta de métricas a cada 15 segundos
+  evaluation_interval: 15s  # Avaliação das regras a cada 15 segundos
 
 scrape_configs:
+  # Job para o Prometheus monitorar a si mesmo
   - job_name: 'prometheus'
     static_configs:
       - targets: ['localhost:9090']
 
+  # Job para o Blackbox Exporter monitorar as URLs configuradas
   - job_name: 'blackbox'
     metrics_path: /probe
     params:
-      module: [http_2xx]
+      module: [https_2xx_ssl]  # Usando módulo para monitorar HTTPS com SSL
+    scrape_interval: 30s  # Coletando a cada 30 segundos para os probes
     static_configs:
       - targets:
-          - https://api-consolemed.unimednatal.com.br/
-          - https://api-benef.unimednatal.com.br/
-          - https://portaldocooperado.unimednatal.com.br/
-          - https://guiamedico.unimednatal.com.br/
-          - https://cultural.unimednatal.com.br/
-          - https://relatoriodegestao.unimednatal.com.br/
-          - https://portaldopaciente.unimednatal.com.br/
-          - https://marcacaodeconsultas.unimednatal.com.br/
-          - https://despesas.unimednatal.com.br/
-          - https://intercambio.unimednatal.com.br/
-          - https://ouvidoria.unimednatal.com.br/
-          - https://beneficiario.unimednatal.com.br/
-          - https://api-vendas.unimednatal.com.br/health
+          - api-consolemed.unimednatal.com.br
+          - api-benef.unimednatal.com.br
+          - portaldocooperado.unimednatal.com.br
+          - guiamedico.unimednatal.com.br
+          - cultural.unimednatal.com.br
+          - relatoriodegestao.unimednatal.com.br
+          - portaldopaciente.unimednatal.com.br
+          - marcacaodeconsultas.unimednatal.com.br
+          - despesas.unimednatal.com.br
+          - intercambio.unimednatal.com.br
+          - ouvidoria.unimednatal.com.br
+          - beneficiario.unimednatal.com.br
+          - api-vendas.unimednatal.com.br
+          - www.google.com
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
       - source_labels: [__param_target]
         target_label: instance
       - target_label: __address__
-        replacement: blackbox_exporter:9115
+        replacement: blackbox_exporter:9115  # Ajuste para seu endereço/porta do Blackbox Exporter
