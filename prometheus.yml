@@ -16,19 +16,19 @@ scrape_configs:
     scrape_interval: 15s
     static_configs:
       - targets:
-          - api-consolemed.unimednatal.com.br
-          - api-benef.unimednatal.com.br
-          - portaldocooperado.unimednatal.com.br
-          - guiamedico.unimednatal.com.br
-          - cultural.unimednatal.com.br
-          - relatoriodegestao.unimednatal.com.br
-          - portaldopaciente.unimednatal.com.br
-          - marcacaodeconsultas.unimednatal.com.br
-          - despesas.unimednatal.com.br
-          - intercambio.unimednatal.com.br
-          - ouvidoria.unimednatal.com.br
-          - beneficiario.unimednatal.com.br
-          - api-vendas.unimednatal.com.br
+          - api.xpto.com.br
+          - api-b.xpto.com.br
+          - portal.xpto.com.br
+          - guia.xpto.com.br
+          - cultura.xpto.com.br
+          - relatorio.xpto.com.br
+          - port.xpto.com.br
+          - marca.xpto.com.br
+          - des.xpto.com.br
+          - inter.xpto.com.br
+          - ouv.xpto.com.br
+          - ben.xpto.com.br
+          - api-v.xpto.com.br
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
