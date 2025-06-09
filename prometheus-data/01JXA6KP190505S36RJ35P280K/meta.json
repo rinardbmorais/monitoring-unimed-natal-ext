@@ -1,0 +1,17 @@
+{
+	"ulid": "01JXA6KP190505S36RJ35P280K",
+	"minTime": 1749420000000,
+	"maxTime": 1749427200000,
+	"stats": {
+		"numSamples": 394132,
+		"numSeries": 1111,
+		"numChunks": 2710
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01JXA6KP190505S36RJ35P280K"
+		]
+	},
+	"version": 1
+}

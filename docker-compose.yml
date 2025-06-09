@@ -5,7 +5,7 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - /home/lab/grafana-storage:/var/lib/grafana
+      - ./grafana:/var/lib/grafana
     networks:
       - monitoring-net
     restart: unless-stopped

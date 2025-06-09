@@ -21,3 +21,6 @@ modules:
       tls_config:
         insecure_skip_verify: false
 
+  icmp:
+    prober: icmp
+    timeout: 5s
