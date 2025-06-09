@@ -1,3 +1,14 @@
-grafana/csv/
-grafana/png/
-grafana/pdf/
+# Ignorar dados persistentes do Prometheus
+prometheus-data/
+
+# Ignorar base de dados do Grafana
+grafana/grafana.db
+grafana/data/
+
+# Ignorar backups e temporários
+grafana_bkp/
+backups/
+
+# Ignorar logs e outros temporários
+*.log
+*.tmp
