@@ -32,7 +32,8 @@ O dashboard exibe:
 
 ## 📸 Prévia do Dashboard
 
-> ![image](https://github.com/user-attachments/assets/c04dedc6-0b7d-4791-8a43-c0d80eaa657d)
+> ![image](https://github.com/user-attachments/assets/c4ff5ecc-f5f0-43da-bd0f-d208bb283044)
+
 
 ---
 
