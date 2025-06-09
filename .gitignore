@@ -12,3 +12,21 @@ backups/
 # Ignorar logs e outros temporários
 *.log
 *.tmp
+# Ignorar dados persistentes e temporários
+prometheus-data/
+grafana_bkp/
+backups/
+grafana/grafana.db
+grafana/data/
+
+# Chaves ou arquivos sensíveis
+*.key
+*.pub
+*.pem
+*.crt
+yes
+yes.pub
+
+# Outros arquivos desnecessários
+*.log
+*.tmp
