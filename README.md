@@ -1,3 +1,4 @@
+
 # 📊 Dashboard de Disponibilidade e Latência com Blackbox Exporter + Prometheus + Grafana
 
 Este projeto apresenta um painel de observabilidade utilizando **Blackbox Exporter**, **Prometheus** e **Grafana**, com foco no monitoramento da **disponibilidade (UP/DOWN)** e **latência** de aplicações e APIs.
@@ -38,7 +39,7 @@ O dashboard exibe:
 ## 🧩 Estrutura do Projeto
 
 ```bash
-.monitoring-unimed-ext/
+.monitoring-ext/
 ├── docker-compose.yml
 ├── prometheus.yml        # Configuração principal do Prometheus
 ├── blackbox.yml          # Configuração do Blackbox Exporter
@@ -66,7 +67,6 @@ Contêineres (Docker Compose):
     └── blackbox_exporter
         ├── Imagem: prom/blackbox-exporter:latest
         └── Porta: 9115:9115
-
 ```
 
 ---
@@ -76,8 +76,8 @@ Contêineres (Docker Compose):
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/rinardbmorais/monitoring-unimed-natal-ext.git
-cd monitoring-unimed-natal-ext
+git clone https://github.com/rinardbmorais/monitoring-ext.git
+cd monitoring-ext
 ```
 
 ### 2. Subir Prometheus + Blackbox + Grafana com Docker Compose
@@ -85,7 +85,6 @@ cd monitoring-unimed-natal-ext
 Você pode criar um `docker-compose.yml` como este (opcional):
 
 ```yaml
-
 services:
   grafana:
     image: grafana/grafana
@@ -122,7 +121,6 @@ services:
 networks:
   monitoring-net:
     external: true
-
 
 #feito por Rinard Morais - Analista DevOps
 ```
